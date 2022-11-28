@@ -10,7 +10,7 @@ spec:
   source:
     path: manifests/brewz
     repoURL: https://github.com/gkor75/modern_app_jumpstart_workshop.git
-    targetRevision: gk
+    targetRevision: tmp
   destination:
     namespace: default
     server: https://kubernetes.default.svc
