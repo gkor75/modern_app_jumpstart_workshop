@@ -72,11 +72,13 @@ kind: Service
 metadata:
   name: api
 spec:
+  type: NodePort
   ports:
     - port: 8000
       targetPort: 8000
       protocol: TCP
       name: http
+      nodePort: 30202
   selector:
     app: api
 
@@ -106,11 +108,13 @@ kind: Service
 metadata:
   name: spa
 spec:
+  type: NodePort
   ports:
     - port: 80
       targetPort: 80
       protocol: TCP
       name: http
+      nodePort: 30201
   selector:
     app: spa
 
@@ -140,11 +144,13 @@ kind: Service
 metadata:
   name: recommendations
 spec:
+  type: NodePort
   ports:
     - port: 8001
       targetPort: 8001
       protocol: TCP
       name: http
+      NodePort: 30203
   selector:
     app: recommendations
 
@@ -174,11 +180,13 @@ kind: Service
 metadata:
   name: inventory
 spec:
+  type: NodePort
   ports:
     - port: 8002
       targetPort: 8002
       protocol: TCP
       name: http
+      NodePort: 30304
   selector:
     app: inventory
 ---
